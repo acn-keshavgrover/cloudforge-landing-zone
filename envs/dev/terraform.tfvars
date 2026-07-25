@@ -1,0 +1,16 @@
+environment          = "dev"
+aws_region           = "ap-northeast-1"
+state_bucket         = "cloudforge-tfstate-dev"
+vpc_cidr             = "10.10.0.0/16"
+public_subnet_cidrs  = ["10.10.1.0/24", "10.10.2.0/24"]
+private_subnet_cidrs = ["10.10.11.0/24", "10.10.12.0/24"]
+availability_zones   = ["ap-northeast-1a", "ap-northeast-1c"]
+enable_nat_gateway   = true
+single_nat_gateway   = true    # cost savings for dev
+enable_flow_logs     = true
+enable_guardduty     = true
+enable_config        = true
+enable_cloudtrail    = true
+enable_mfa_enforcement = true
+log_retention_days   = 30
+allowed_cidrs        = ["203.0.113.0/24"]

@@ -1,0 +1,17 @@
+environment          = "prod"
+aws_region           = "ap-northeast-1"
+state_bucket         = "cloudforge-tfstate-prod"
+vpc_cidr             = "10.0.0.0/16"
+public_subnet_cidrs  = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+private_subnet_cidrs = ["10.0.11.0/24", "10.0.12.0/24", "10.0.13.0/24"]
+availability_zones   = ["ap-northeast-1a", "ap-northeast-1c", "ap-northeast-1d"]
+enable_nat_gateway   = true
+single_nat_gateway   = false   # HA for prod — one NAT per AZ
+enable_flow_logs     = true
+enable_guardduty     = true
+enable_config        = true
+enable_cloudtrail    = true
+enable_mfa_enforcement = true
+log_retention_days   = 365
+allowed_cidrs        = ["198.51.100.0/24"]
+admin_role_trusted_accounts = ["111111111111"]  # management account
